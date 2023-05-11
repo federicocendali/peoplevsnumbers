@@ -38,4 +38,13 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-around',
     marginTop: 20,
   },
+  confirmedContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginVertical: 40,
+    marginHorizontal: 20,
+  },
+  confirmedTitle: {
+    fontSize: 16,
+  },
 });
