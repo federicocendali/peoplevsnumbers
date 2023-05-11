@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
     color: theme.colors.text,
     textAlign: 'center',
     paddingVertical: 20,
+    fontFamily: 'Kanit-Regular',
   },
   inputContainer: {
     justifyContent: 'center',
@@ -23,6 +24,7 @@ export const styles = StyleSheet.create({
     color: theme.colors.text,
     paddingVertical: 5,
     textAlign: 'center',
+    fontFamily: 'Kanit-Regular',
   },
   input: {
     borderBottomColor: theme.colors.primary,
@@ -46,5 +48,6 @@ export const styles = StyleSheet.create({
   },
   confirmedTitle: {
     fontSize: 16,
+    fontFamily: 'Kanit-Regular',
   },
 });

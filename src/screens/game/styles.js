@@ -6,7 +6,19 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: theme.colors.white,
-    justifyContent: 'center',
+    paddingVertical: 20,
+  },
+  content: {
     alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: 20,
+  },
+  title: {
+    fontSize: 18,
+    fontFamily: 'Kanit-Regular',
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
   },
 });

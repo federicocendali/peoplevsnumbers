@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
   },
   number: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontFamily: 'Kanit-Bold',
     color: theme.colors.black,
   },
 });
