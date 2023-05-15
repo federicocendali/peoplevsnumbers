@@ -36,6 +36,7 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     paddingVertical: 10,
+    fontFamily: 'Kanit-Regular',
   },
   buttonContainer: {
     flexDirection: 'row',
