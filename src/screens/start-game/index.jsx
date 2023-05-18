@@ -65,8 +65,8 @@ const StartGame = ({ onStartGame }) => {
     <KeyboardAvoidingView
       behavior={isAndroid ? 'padding' : 'height'}
       style={styles.containerKeyboardAvoidingView}>
-      <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-        <ScrollView style={styles.container}>
+      <ScrollView contentContainerStyle={styles.containerScroll}>
+        <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
           <View style={styles.container}>
             <Text style={styles.title}>Start Game</Text>
             <Card style={isPortrait ? styles.inputContainer : styles.inputContainerLandscape}>
@@ -94,8 +94,8 @@ const StartGame = ({ onStartGame }) => {
             </Card>
             <Confirmed />
           </View>
-        </ScrollView>
-      </TouchableWithoutFeedback>
+        </TouchableWithoutFeedback>
+      </ScrollView>
     </KeyboardAvoidingView>
   );
 };
