@@ -63,7 +63,7 @@ const StartGame = ({ onStartGame }) => {
 
   return (
     <KeyboardAvoidingView
-      behavior={isAndroid ? 'padding' : 'height'}
+      /* behavior={isAndroid ? 'padding' : 'height'} */
       style={styles.containerKeyboardAvoidingView}>
       <ScrollView contentContainerStyle={styles.containerScroll}>
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
