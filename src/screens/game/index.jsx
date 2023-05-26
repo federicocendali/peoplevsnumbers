@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from 'react';
-import { Button, Text, View, Alert, ScrollView } from 'react-native';
+import { Button, Text, View, Alert } from 'react-native';
 
 import { styles } from './styles';
 import { Card, NumberContainer } from '../../components';
-import { theme } from '../../constants';
+import { ORIENTATION, theme } from '../../constants';
 import useOrientation from '../../hooks/useOrientation';
 
 const MIN_NUMBER = 1;
@@ -29,7 +29,7 @@ const Game = ({ userNumber, onGameOver }) => {
   const currentLow = useRef(MIN_NUMBER);
   const currentHigh = useRef(MAX_NUMBER);
 
-  const { isPortrait } = useOrientation();
+  const orientation = useOrientation();
 
   const onHandlerNextGuess = (direction) => {
     if (
@@ -54,26 +54,24 @@ const Game = ({ userNumber, onGameOver }) => {
     if (currentGuess === userNumber) onGameOver(rounds);
   }, [currentGuess, userNumber, onGameOver]);
   return (
-    <ScrollView style={styles.container}>
-      <View style={styles.container}>
-        <Card style={isPortrait ? styles.content : styles.contentLandscape}>
-          <Text style={styles.title}>Guess a Number</Text>
-          <NumberContainer number={currentGuess} />
-          <View style={styles.buttonContainer}>
-            <Button
-              title="Lower"
-              color={theme.colors.secondary}
-              onPress={() => onHandlerNextGuess('lower')}
-            />
-            <Button
-              title="Greater"
-              color={theme.colors.primary}
-              onPress={() => onHandlerNextGuess('greater')}
-            />
-          </View>
-        </Card>
-      </View>
-    </ScrollView>
+    <View style={styles.container}>
+      <Card style={orientation === ORIENTATION.PORTRAIT ? styles.content : styles.contentLandscape}>
+        <Text style={styles.title}>Guess a Number</Text>
+        <NumberContainer number={currentGuess} />
+        <View style={styles.buttonContainer}>
+          <Button
+            title="Lower"
+            color={theme.colors.secondary}
+            onPress={() => onHandlerNextGuess('lower')}
+          />
+          <Button
+            title="Greater"
+            color={theme.colors.primary}
+            onPress={() => onHandlerNextGuess('greater')}
+          />
+        </View>
+      </Card>
+    </View>
   );
 };
 
