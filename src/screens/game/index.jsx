@@ -1,10 +1,10 @@
-import { useState, useRef, useEffect } from 'react';
-import { Button, Text, View, Alert } from 'react-native';
+import { useState, useRef, useEffect } from "react";
+import { Button, Text, View, Alert } from "react-native";
 
-import { styles } from './styles';
-import { Card, NumberContainer } from '../../components';
-import { ORIENTATION, theme } from '../../constants';
-import useOrientation from '../../hooks/useOrientation';
+import { styles } from "./styles";
+import { Card, NumberContainer } from "../../components";
+import { ORIENTATION, theme } from "../../constants";
+import useOrientation from "../../hooks/useOrientation";
 
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 99;
@@ -33,14 +33,14 @@ const Game = ({ userNumber, onGameOver }) => {
 
   const onHandlerNextGuess = (direction) => {
     if (
-      (direction === 'lower' && currentGuess < userNumber) ||
-      (direction === 'greater' && currentGuess > userNumber)
+      (direction === "lower" && currentGuess < userNumber) ||
+      (direction === "greater" && currentGuess > userNumber)
     ) {
-      Alert.alert('Hint', 'You know that is wrong!', [{ text: 'Sorry', style: 'cancel' }]);
+      Alert.alert("Hint", "You know that is wrong!", [{ text: "Sorry", style: "cancel" }]);
       return;
     }
 
-    if (direction === 'lower') {
+    if (direction === "lower") {
       currentHigh.current = currentGuess;
     } else {
       currentLow.current = currentGuess;
@@ -62,12 +62,12 @@ const Game = ({ userNumber, onGameOver }) => {
           <Button
             title="Lower"
             color={theme.colors.secondary}
-            onPress={() => onHandlerNextGuess('lower')}
+            onPress={() => onHandlerNextGuess("lower")}
           />
           <Button
             title="Greater"
             color={theme.colors.primary}
-            onPress={() => onHandlerNextGuess('greater')}
+            onPress={() => onHandlerNextGuess("greater")}
           />
         </View>
       </Card>

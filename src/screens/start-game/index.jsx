@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Button,
   Text,
@@ -9,38 +9,38 @@ import {
   Alert,
   ScrollView,
   KeyboardAvoidingView,
-} from 'react-native';
+} from "react-native";
 
-import { styles } from './styles';
-import { Card, NumberContainer } from '../../components/index';
-import { theme, ORIENTATION } from '../../constants';
-import useOrientation from '../../hooks/useOrientation';
+import { styles } from "./styles";
+import { Card, NumberContainer } from "../../components/index";
+import { theme, ORIENTATION } from "../../constants";
+import useOrientation from "../../hooks/useOrientation";
 
 const StartGame = ({ onStartGame }) => {
-  const [numberOption, setNumberOption] = useState('');
+  const [numberOption, setNumberOption] = useState("");
   const [confirmed, setConfirmed] = useState(false);
   const [selectedNumber, setSelectedNumber] = useState(null);
   const orientation = useOrientation();
 
   const onHandlerChangeText = (text) => {
-    setNumberOption(text.replace(/[^0-9]/g, ''));
+    setNumberOption(text.replace(/[^0-9]/g, ""));
   };
 
   const onHandlerConfirm = () => {
     const chosenNumber = Number(numberOption);
     if (isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber > 99) {
-      Alert.alert('Invalid number', 'Number has to be a number between 1 and 99', [
-        { text: 'Okay', style: 'destructive', onPress: () => setNumberOption('') },
+      Alert.alert("Invalid number", "Number has to be a number between 1 and 99", [
+        { text: "Okay", style: "destructive", onPress: () => setNumberOption("") },
       ]);
     } else {
       setConfirmed(true);
       setSelectedNumber(chosenNumber);
-      setNumberOption('');
+      setNumberOption("");
     }
   };
 
   const onHandlerReset = () => {
-    setNumberOption('');
+    setNumberOption("");
     setConfirmed(false);
     setSelectedNumber(null);
   };
@@ -95,7 +95,7 @@ const StartGame = ({ onStartGame }) => {
                   title="Confirm"
                   onPress={onHandlerConfirm}
                   color={theme.colors.primary}
-                  disabled={numberOption === ''}
+                  disabled={numberOption === ""}
                 />
               </View>
             </Card>

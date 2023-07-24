@@ -1,13 +1,13 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
-import { theme } from '../../constants';
+import { theme } from "../../constants";
 
 export const styles = StyleSheet.create({
   container: {
     width: 60,
     height: 60,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     backgroundColor: theme.colors.secondary,
     borderWidth: 2,
     borderRadius: 5,
@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
   },
   number: {
     fontSize: 20,
-    fontFamily: 'Kanit-Bold',
+    fontFamily: "Kanit-Bold",
     color: theme.colors.black,
   },
 });

@@ -1,7 +1,7 @@
-import * as ScreenOrientation from 'expo-screen-orientation';
-import { useState, useEffect } from 'react';
+import * as ScreenOrientation from "expo-screen-orientation";
+import { useState, useEffect } from "react";
 
-import { ORIENTATION_NUMBER } from '../constants';
+import { ORIENTATION_NUMBER } from "../constants";
 
 const useOrientation = () => {
   const [screenOrientation, setScreenOrientation] = useState(

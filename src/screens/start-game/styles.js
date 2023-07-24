@@ -1,6 +1,6 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
-import { theme } from '../../constants';
+import { theme } from "../../constants";
 
 export const styles = StyleSheet.create({
   container: {
@@ -19,19 +19,19 @@ export const styles = StyleSheet.create({
   title: {
     fontSize: 16,
     color: theme.colors.text,
-    textAlign: 'center',
+    textAlign: "center",
     paddingVertical: 20,
-    fontFamily: 'Kanit-Regular',
+    fontFamily: "Kanit-Regular",
   },
   inputContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     marginHorizontal: 20,
     height: 200,
   },
   inputContainerLandscape: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     marginHorizontal: 20,
     height: 180,
   },
@@ -39,40 +39,40 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     color: theme.colors.text,
     paddingVertical: 5,
-    textAlign: 'center',
-    fontFamily: 'Kanit-Regular',
+    textAlign: "center",
+    fontFamily: "Kanit-Regular",
   },
   input: {
     borderBottomColor: theme.colors.primary,
     borderBottomWidth: 1,
     minWidth: 70,
     fontSize: 20,
-    textAlign: 'center',
+    textAlign: "center",
     paddingVertical: 10,
-    fontFamily: 'Kanit-Regular',
+    fontFamily: "Kanit-Regular",
   },
   buttonContainer: {
-    flexDirection: 'row',
-    width: '80%',
-    justifyContent: 'space-around',
+    flexDirection: "row",
+    width: "80%",
+    justifyContent: "space-around",
     marginTop: 20,
   },
   confirmedContainer: {
     height: 200,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     marginVertical: 40,
     marginHorizontal: 20,
   },
   confirmedContainerLandscape: {
     height: 180,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     marginVertical: 40,
     marginHorizontal: 20,
   },
   confirmedTitle: {
     fontSize: 16,
-    fontFamily: 'Kanit-Regular',
+    fontFamily: "Kanit-Regular",
   },
 });

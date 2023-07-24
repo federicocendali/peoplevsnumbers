@@ -1,19 +1,19 @@
-import { useFonts } from 'expo-font';
-import { useState } from 'react';
-import { ActivityIndicator, View } from 'react-native';
+import { useFonts } from "expo-font";
+import { useState } from "react";
+import { ActivityIndicator, View } from "react-native";
 
-import { Header } from './components';
-import { theme } from './constants';
-import { Game, StartGame, GameOver } from './screens/index';
-import { styles } from './styles';
+import { Header } from "./components";
+import { theme } from "./constants";
+import { Game, StartGame, GameOver } from "./screens/index";
+import { styles } from "./styles";
 
 export default function App() {
   const [userNumber, setUserNumber] = useState(null);
   const [guessRounds, setGuessRounds] = useState(0);
   const [loaded] = useFonts({
-    'Kanit-Bold': require('../assets/fonts/Kanit-Bold.ttf'),
-    'Kanit-Light': require('../assets/fonts/Kanit-Light.ttf'),
-    'Kanit-Regular': require('../assets/fonts/Kanit-Regular.ttf'),
+    "Kanit-Bold": require("../assets/fonts/Kanit-Bold.ttf"),
+    "Kanit-Light": require("../assets/fonts/Kanit-Light.ttf"),
+    "Kanit-Regular": require("../assets/fonts/Kanit-Regular.ttf"),
   });
 
   if (!loaded) {
@@ -24,7 +24,7 @@ export default function App() {
     );
   }
 
-  const headerTitle = userNumber ? 'Game' : 'Welcome';
+  const headerTitle = userNumber ? "Game" : "Welcome";
 
   const onStartGame = (number) => {
     setUserNumber(number);

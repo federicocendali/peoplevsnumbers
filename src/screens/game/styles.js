@@ -1,6 +1,6 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
-import { theme } from '../../constants';
+import { theme } from "../../constants";
 
 export const styles = StyleSheet.create({
   container: {
@@ -10,24 +10,24 @@ export const styles = StyleSheet.create({
   },
   content: {
     height: 200,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     marginHorizontal: 20,
   },
   contentLandscape: {
     height: 180,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     marginHorizontal: 20,
   },
   title: {
     fontSize: 18,
-    fontFamily: 'Kanit-Regular',
+    fontFamily: "Kanit-Regular",
   },
   buttonContainer: {
-    width: '80%',
-    flexDirection: 'row',
-    justifyContent: 'space-around',
+    width: "80%",
+    flexDirection: "row",
+    justifyContent: "space-around",
     paddingTop: 10,
   },
 });

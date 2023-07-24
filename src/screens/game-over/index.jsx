@@ -1,9 +1,9 @@
-import { Button, Image, Text, View } from 'react-native';
+import { Button, Image, Text, View } from "react-native";
 
-import { styles } from './styles';
-import { Card } from '../../components/index';
-import { ORIENTATION, theme } from '../../constants';
-import useOrientation from '../../hooks/useOrientation';
+import { styles } from "./styles";
+import { Card } from "../../components/index";
+import { ORIENTATION, theme } from "../../constants";
+import useOrientation from "../../hooks/useOrientation";
 
 const GameOver = ({ rounds, userNumber, onRestart }) => {
   const orientation = useOrientation();
@@ -13,7 +13,7 @@ const GameOver = ({ rounds, userNumber, onRestart }) => {
         <Image
           style={orientation === ORIENTATION.PORTRAIT ? styles.image : styles.imageLandscape}
           source={{
-            uri: 'https://media.istockphoto.com/id/1325433246/es/v%C3%ADdeo/animaci%C3%B3n-de-texto-game-over-con-el-canal-alfa-4k.jpg?s=640x640&k=20&c=_y_e72xtakNzsruRIjjBljRYRojcU3K3DDufC12Qt7w=',
+            uri: "https://media.istockphoto.com/id/1325433246/es/v%C3%ADdeo/animaci%C3%B3n-de-texto-game-over-con-el-canal-alfa-4k.jpg?s=640x640&k=20&c=_y_e72xtakNzsruRIjjBljRYRojcU3K3DDufC12Qt7w=",
           }}
           resizeMode="cover"
         />

@@ -1,34 +1,34 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
-import { theme } from '../../constants';
+import { theme } from "../../constants";
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: theme.colors.white,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   content: {
-    width: '80%',
+    width: "80%",
     height: 350,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     paddingVertical: 0,
   },
   contentLandscape: {
-    flexDirection: 'row',
+    flexDirection: "row",
     height: 210,
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
     marginHorizontal: 20,
     paddingVertical: 0,
   },
   image: {
-    width: '100%',
+    width: "100%",
     height: 200,
   },
   imageLandscape: {
-    width: '50%',
+    width: "50%",
     height: 210,
   },
   detailContainer: {
@@ -37,17 +37,17 @@ export const styles = StyleSheet.create({
   detailContainerLandscape: {
     flex: 1,
     marginHorizontal: 20,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   rounds: {
     paddingVertical: 10,
     fontSize: 16,
-    fontFamily: 'Kanit-Regular',
+    fontFamily: "Kanit-Regular",
   },
   selectedNumber: {
     fontSize: 16,
-    fontFamily: 'Kanit-Regular',
+    fontFamily: "Kanit-Regular",
     paddingVertical: 5,
   },
   buttonContainer: {
